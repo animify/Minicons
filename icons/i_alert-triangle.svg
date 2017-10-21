@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>i</title>
+  <g id="Complete">
+    <g id="alert-triangle">
+      <g>
+        <path id="_--Triangle" data-name="--Triangle" d="M10.21,4.13l-6.93,14A2,2,0,0,0,5.07,21H18.93a2,2,0,0,0,1.79-2.89l-6.93-14A2,2,0,0,0,10.21,4.13Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line x1="12" y1="8.97" x2="12" y2="13.03" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="12" cy="17" r="0.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

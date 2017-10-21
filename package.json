@@ -1,0 +1,42 @@
+{
+    "name": "minicons",
+    "version": "1.0.0",
+    "description": "Aesthetic open-source svg icons",
+    "main": "gulpfile.babel.js",
+    "dependencies": {
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-svgmin": "^1.2.4",
+        "run-sequence": "^2.2.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "chai": "^4.1.2",
+        "chai-fs": "^1.0.0",
+        "eslint": "^4.9.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "mocha": "^4.0.1"
+    },
+    "scripts": {
+        "optimize": "gulp optimize-icons",
+        "test": "mocha --compilers js:babel-core/register"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/animify/Minicons.git"
+    },
+    "keywords": [
+        "svg",
+        "icons",
+        "iconset",
+        "javascript"
+    ],
+    "author": "Stefan Mansson <https://mansson.io>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/animify/Minicons/issues"
+    },
+    "homepage": "https://minicons.io"
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>i</title>
+  <g id="Complete">
+    <g id="volume-down">
+      <g>
+        <polygon points="4.94 9 8.94 9 13.94 3 13.94 21 8.94 16 3.94 16 3.94 9 4.94 9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M17.61,14.84A2.67,2.67,0,0,0,20.06,12a2.67,2.67,0,0,0-2.45-2.84" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>i</title>
+  <g id="Complete">
+    <g id="align-justify">
+      <g>
+        <polygon points="19.98 18 4.02 18 4.02 18 19.98 18 19.98 18" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <polygon points="19.98 14 4.02 14 4.02 14 19.98 14 19.98 14" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <polygon points="19.98 10 4.02 10 4.02 10 19.98 10 19.98 10" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <polygon points="19.98 6 4.02 6 4.02 6 19.98 6 19.98 6" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

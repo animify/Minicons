@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>i</title>
+  <g id="Complete">
+    <g id="volume-off">
+      <g>
+        <line x1="2.93" y1="3" x2="20.93" y2="21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <polyline points="9.9 5.51 12 3 12 21 7 16 2 16 2 9 3 9 7 9 7.75 8.1" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M21,16.16a8.73,8.73,0,0,0,1-4.16c0-4.33-3-7.84-6.76-7.84" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M15.31,19.84A6,6,0,0,0,18,19.18" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M17.71,13.13a3.22,3.22,0,0,0,.2-1.13,2.67,2.67,0,0,0-2.45-2.84" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

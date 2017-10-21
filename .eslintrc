@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    'indent': [ 2, 4 ],
+    "linebreak-style": "off",
+    "no-shadow": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  },
+   "env": {
+    "mocha": true,
+    "node": true
+  }
+}
