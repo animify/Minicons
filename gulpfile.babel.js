@@ -9,7 +9,7 @@ gulp.task('purge', next =>
     }, next));
 
 gulp.task('minify', () =>
-    gulp.src('icons/raw/*.svg')
+    gulp.src('icons/*.svg')
         .pipe(svgmin({
             plugins: [
                 {
