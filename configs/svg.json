@@ -1,21 +1,14 @@
 {
     "name" : "default",
-    "attributes" : [
-        {
-            "type" : "stroke",
-            "value" : "#000"
-        },
-        {
-            "type" : "stroke-width",
-            "value" : 2
-        },
-        {
-            "type" : "stroke-linejoin",
-            "value" : "round"
-        },
-        {
-            "type" : "stroke-linecap",
-            "value" : "round"
-        }
-    ]
+    "attributes" : {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width" : 24,
+        "height" : 24,
+        "viewbox" : "0 0 24 24",
+        "fill" : "none",
+        "stroke" : "#000",
+        "stroke-width" : 2,
+        "stroke-linejoin" : "round",
+        "stroke-linecap" : "round"
+    }
 }

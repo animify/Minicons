@@ -16,6 +16,12 @@ gulp.task('minify', () =>
                     removeTitle: true,
                 },
                 {
+                    mergePaths: false,
+                },
+                {
+                    convertShapeToPath: false,
+                },
+                {
                     removeAttrs: {
                         attrs: '(fill|stroke.*)',
                     },
