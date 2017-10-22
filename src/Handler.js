@@ -1,6 +1,12 @@
 import iconFile from '../dist/Minicons.json';
 
 export default class Handler {
+    /**
+     * Creates an SVG Minicon element
+     * @param  {string} name The defined name of the Minicon
+     * @param  {Object} props The props to be applied to the SVG element
+     * @return {Element} The SVG element of the Minicon
+     */
     create(name, props) {
         const propsArray = [];
         const iconObject = this.icons.find(ic => ic.name === name);
@@ -9,7 +15,7 @@ export default class Handler {
         if (!iconObject) return undefined;
 
         Object.keys(mergedProps).forEach(prop => {
-            mergedProps[prop] && propsArray.push(`${prop}="${mergedProps[prop]}"`)
+            mergedProps[prop] && propsArray.push(`${prop}="${mergedProps[prop]}"`);
         });
 
         const svg = `<svg ${propsArray.join(' ')}>${iconObject.content}</svg>`;
@@ -18,11 +24,19 @@ export default class Handler {
         return svgIcon.querySelector('svg');
     }
 
+    /**
+     * Gathers all [data-minicon] elements
+     * and swaps them into Minicons
+     */
     swap() {
         const domIcons = document.querySelectorAll('[data-minicon]');
         domIcons.forEach(icon => this.swapElement(icon));
     }
 
+    /**
+     * Swaps the DOM element with a Minicon
+     * @param {Element} node The element that is to be switched
+     */
     swapElement(node) {
         const svgIcon = this.create(node.dataset.minicon, this.options.attributes);
         if (!svgIcon) return;
@@ -30,10 +44,19 @@ export default class Handler {
         node.parentNode.replaceChild(svgIcon, node);
     }
 
+    /**
+     * Observes for changes done in the body
+     */
     async setObserver() {
         await this.watch(document.getElementsByTagName('body')[0]);
     }
 
+    /**
+     * Sets up a mutation observer
+     * and checks if Minicon is added
+     * @param  {Element} domNode The element that is being watched
+     * @return {Promise} Returns the mutation observer
+     */
     watch(domNode) {
         const observerConfig = {
             attributes: false,
@@ -49,6 +72,11 @@ export default class Handler {
         });
     }
 
+    /**
+     * Checks if mutation contains a minicon
+     * and swaps the affected element
+     * @param {Object} mutation The mutation object passed from the observer
+     */
     isMinicon(mutation) {
         if (mutation.addedNodes.length === 0) return;
 
@@ -57,6 +85,11 @@ export default class Handler {
         isMinicon && this.swapElement(addedNode);
     }
 
+    /**
+     * Sets the options to be used
+     * and runs the observer
+     * @param {Object} options User-set Minicon options
+     */
     constructor(options) {
         this.defaultProps = {
             xmlns: 'http://www.w3.org/2000/svg',
