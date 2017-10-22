@@ -3,8 +3,12 @@
   "plugins": [
     "import"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   "rules": {
     "arrow-parens": ["error", "as-needed"],
+    "class-methods-use-this": "off",
     'indent': [ 2, 4 ],
     "linebreak-style": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
@@ -12,6 +16,7 @@
     "no-unused-expressions": "off"
   },
    "env": {
+    "browser": true,
     "mocha": true,
     "node": true
   }
