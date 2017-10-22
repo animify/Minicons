@@ -23,7 +23,7 @@
     },
     "scripts": {
         "optimize": "gulp optimize-icons",
-        "build": "./node_modules/.bin/babel-node bin/build",
+        "build": "./node_modules/.bin/babel-node bin/index",
         "test": "mocha --compilers js:babel-core/register"
     },
     "repository": {

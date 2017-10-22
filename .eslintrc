@@ -7,8 +7,9 @@
     "arrow-parens": ["error", "as-needed"],
     'indent': [ 2, 4 ],
     "linebreak-style": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-shadow": "off",
-    "no-console": ["error", { "allow": ["warn", "error"] }]
+    "no-unused-expressions": "off"
   },
    "env": {
     "mocha": true,

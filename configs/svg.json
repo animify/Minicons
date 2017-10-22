@@ -1,0 +1,21 @@
+{
+    "name" : "default",
+    "attributes" : [
+        {
+            "type" : "stroke",
+            "value" : "#000"
+        },
+        {
+            "type" : "stroke-width",
+            "value" : 2
+        },
+        {
+            "type" : "stroke-linejoin",
+            "value" : "round"
+        },
+        {
+            "type" : "stroke-linecap",
+            "value" : "round"
+        }
+    ]
+}
