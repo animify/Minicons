@@ -16,13 +16,13 @@ function DELETE_TEMP {
 
 function BUILD_ICONS {
     rm -rf dist/icons/*
-    npm run optimize
-    npm run build:icons
+    svgo --quiet --config=./configs/svgo.yml -f ./icons -o ./dist/icons
+    npm run parse
     echo -e "\e[35m Minicons optimized and built.\033[0m"
 }
 
 function BUILD_JS {
-    npm run build:js
+    npm run package
     echo -e "\e[35m Minicons JS files built.\033[0m"
 }
 

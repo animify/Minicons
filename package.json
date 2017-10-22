@@ -4,11 +4,9 @@
     "description": "Aesthetic open-source svg icons",
     "main": "gulpfile.babel.js",
     "dependencies": {
-        "del": "^3.0.0",
-        "gulp": "^3.9.1",
-        "gulp-svgmin": "^1.2.4",
         "parse5": "^3.0.2",
-        "run-sequence": "^2.2.0"
+        "run-sequence": "^2.2.0",
+        "svgo": "^0.7.2"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -24,9 +22,8 @@
         "webpack": "^3.8.1"
     },
     "scripts": {
-        "optimize": "gulp optimize-icons",
-        "build:icons": "./node_modules/.bin/babel-node bin/index",
-        "build:js": "webpack",
+        "parse": "./node_modules/.bin/babel-node bin/index",
+        "package": "webpack",
         "test": "mocha --compilers js:babel-core/register"
     },
     "repository": {
