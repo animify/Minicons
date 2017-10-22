@@ -17,7 +17,7 @@ gulp.task('minify', () =>
                 },
                 {
                     removeAttrs: {
-                        attrs: '(fill|stroke.*)'
+                        attrs: '(fill|stroke.*)',
                     },
                 },
             ],
