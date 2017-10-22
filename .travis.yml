@@ -9,3 +9,5 @@ script:
 cache:
     directories:
         - "node_modules"
+env:
+    CODECLIMATE_REPO_TOKEN: f0edba526a656286552680b23eb0a28529d54a05dfb047e0fc1d0068314e3a3d
