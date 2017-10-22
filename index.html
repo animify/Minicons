@@ -1,15 +1,21 @@
 <html>
     <body>
         <p> Minicons </p>
-        <i data-minicon="push-right"/>
+        <div id="test-icons"></div>
         <script src="dist/minicons.js"></script>
         <script>
+            minicons.icons.forEach(icon => {
+                const iconElement = document.createElement('i');
+                const testIcons = document.getElementById('test-icons');
+                iconElement.setAttribute('data-minicon', icon.name);
+                testIcons.appendChild(iconElement);
+            });
             minicons.setOptions({
                 "observe" : false,
                 "config" : {
                     "name" : "theme_config",
                     "props" : {
-                        "stroke" : "#ff0060"
+                        "stroke" : "#000"
                     }
                 }
             });

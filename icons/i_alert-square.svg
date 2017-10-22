@@ -65,9 +65,9 @@
 				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12" y1="8" x2="12" y2="12"/>
 			
 				<path id="_x2D_-Rectangle_1_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-				M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v14C21,20.1,20.1,21,19,21z"/>
-			<path fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-				M12,16L12,16"/>
+				M20,22H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h16c1.1,0,2,0.9,2,2v16C22,21.1,21.1,22,20,22z"/>
+			
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12" y1="16" x2="12" y2="16"/>
 		</g>
 	</g>
 	<g id="alert-triangle">

@@ -50,9 +50,9 @@
 	<g id="Disc">
 		<g>
 			
-				<circle id="Circle_3_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="9"/>
+				<circle id="Circle_3_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
 			
-				<circle id="Circle_2_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="3"/>
+				<circle id="Circle_2_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="3.5"/>
 		</g>
 	</g>
 	<g id="DashedRectangle">

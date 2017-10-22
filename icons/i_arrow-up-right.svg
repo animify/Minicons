@@ -90,10 +90,10 @@
 	<g id="arrow-up-right">
 		<g>
 			
-				<polyline id="Right_12_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				12.6,5.6 18.4,5.6 18.4,11.4 			"/>
+				<polyline id="Right_9_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				18.7,12.4 18.7,5.3 11.6,5.3 			"/>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.6" y1="18.4" x2="17.3" y2="6.7"/>
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.3" y1="18.7" x2="17.1" y2="6.9"/>
 		</g>
 	</g>
 	<g id="arrow-left">

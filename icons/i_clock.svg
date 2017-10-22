@@ -48,11 +48,10 @@
 	<g id="Clock">
 		<g>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12" y1="12" x2="14.2" y2="14.2"/>
+				<polyline fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				11.9,5.9 11.9,11.9 12,12 14.1,14.1 			"/>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12" y1="12" x2="12" y2="7"/>
-			
-				<circle id="Circle_5_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="9"/>
+				<circle id="Circle_5_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
 		</g>
 	</g>
 	<g id="Disc">

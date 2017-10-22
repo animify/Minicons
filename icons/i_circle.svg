@@ -44,10 +44,8 @@
 	<g id="Triangle_1_">
 	</g>
 	<g id="Circle">
-		<g>
-			
-				<circle id="Circle_1_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="9"/>
-		</g>
+		
+			<circle id="Circle_1_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
 	</g>
 	<g id="Clock">
 	</g>

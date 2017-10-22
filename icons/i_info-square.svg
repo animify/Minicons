@@ -69,12 +69,12 @@
 		<g>
 			
 				<path id="_x2D_-Rectangle_2_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-				M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v14C21,20.1,20.1,21,19,21z"/>
+				M20,22H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h16c1.1,0,2,0.9,2,2v16C22,21.1,21.1,22,20,22z"/>
 			
 				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12" y1="12" x2="12" y2="16"/>
+			
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12" y1="8" x2="12" y2="8"/>
 		</g>
-		<path fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M12,8L12,8"/>
 	</g>
 	<g id="info-circle">
 	</g>

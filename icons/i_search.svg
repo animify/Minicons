@@ -100,9 +100,9 @@
 	<g id="search">
 		<g>
 			
-				<circle fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="10.3" cy="10.3" r="6"/>
+				<circle fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="10.1" cy="10.1" r="8"/>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19.8" y1="19.8" x2="15.3" y2="15.3"/>
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.9" y1="21.9" x2="16.3" y2="16.3"/>
 		</g>
 	</g>
 	<g id="zoom-in">

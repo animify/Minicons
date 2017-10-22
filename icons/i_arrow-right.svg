@@ -94,10 +94,10 @@
 	<g id="arrow-right">
 		<g>
 			
-				<polyline id="Right_3_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				17,7.9 21,12 17,16.1 			"/>
+				<polyline id="Right_6_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				16.4,7 21.5,12 16.4,17 			"/>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3" y1="12" x2="19.5" y2="12"/>
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="2.5" y1="12" x2="19.2" y2="12"/>
 		</g>
 	</g>
 	<g id="arrow-down">

@@ -82,9 +82,9 @@
 	<g id="remove-circle">
 		<g>
 			
-				<circle id="_x2D_-Circle_5_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="9"/>
+				<circle id="_x2D_-Circle_5_" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
 			
-				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="12" x2="9" y2="12"/>
+				<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15.5" y1="12" x2="8.5" y2="12"/>
 		</g>
 	</g>
 	<g id="arrow-down-right">
