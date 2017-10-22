@@ -11,7 +11,7 @@ describe('Valid theme config', () => {
     });
 
     it('Valid props', next => {
-        expect(svgConfig.props).to.have.all.keys('width', 'height', 'viewbox', 'fill', 'stroke', 'stroke-width', 'stroke-linejoin', 'stroke-linecap');
+        expect(svgConfig.props).to.have.all.keys('width', 'height', 'viewBox', 'fill', 'stroke', 'stroke-width', 'stroke-linejoin', 'stroke-linecap');
         expect(svgConfig.props.width).to.be.a('number');
         expect(svgConfig.props.height).to.be.a('number');
         expect(svgConfig.props['stroke-width']).to.be.a('number');

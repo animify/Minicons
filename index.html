@@ -1,6 +1,19 @@
 <html>
     <body>
-        <p> hi </p>
+        <p> Minicons </p>
+        <i data-minicon="push-right"/>
         <script src="dist/minicons.js"></script>
+        <script>
+            minicons.setOptions({
+                "observe" : false,
+                "config" : {
+                    "name" : "theme_config",
+                    "props" : {
+                        "stroke" : "#ff0060"
+                    }
+                }
+            });
+            minicons.swap();
+        </script>
     </body>
 </html>

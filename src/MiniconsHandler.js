@@ -1,6 +1,23 @@
 import iconFile from '../dist/Minicons.json';
+import Validator from './Validator';
 
 export default class MiniconsHandler {
+    /**
+     * User-set options for overriding defaults
+     * @param {Object} options Observe and config options
+     */
+    setOptions(options) {
+        Validator.validateOptions(options, (error) => {
+            if (!error) {
+                options.config.props = Object.assign(this.config.props, options.config.props);
+                this.config = options.config || this.config;
+                this.canObserve = options.observe !== undefined ? options.observe : true;
+            } else {
+                console.log(`%cMinicons:`, 'font-weight: bold; text-decoration: underline;', `Oh oh! Something wrong when processing your options. ${error.message} [${error.type}]`, )
+            }
+        });
+    }
+
     /**
      * Creates an SVG Minicon element
      * @param  {string} name The defined name of the Minicon
@@ -31,6 +48,11 @@ export default class MiniconsHandler {
     swap() {
         const iconElements = document.querySelectorAll('[data-minicon]');
         iconElements.forEach(icon => this.swapElement(icon));
+
+        if (this._firstRun) {
+            this.canObserve && this.setObserver();
+            this._firstRun = false;
+        }
     }
 
     /**
@@ -38,7 +60,7 @@ export default class MiniconsHandler {
      * @param {Element} node The element that is to be switched
      */
     swapElement(element) {
-        const iconProps = Object.assign(this.options.props, {
+        const iconProps = Object.assign(this.config.props, {
             class: `${element.classList.value} minicon minicon-${element.dataset.minicon}`
         });
         const iconSvg = this.create(element.dataset.minicon, iconProps);
@@ -90,17 +112,15 @@ export default class MiniconsHandler {
     }
 
     /**
-     * Sets the options to be used
-     * and runs the observer
-     * @param {Object} options User-set Minicon options
+     * Sets the default props and the icon JSON file/config
      */
-    constructor(options) {
+    constructor() {
+        this._firstRun = true;
+        this.canObserve = true;
+        this.config = iconFile.config;
+        this.icons = iconFile.icons;
         this.defaultProps = {
             xmlns: 'http://www.w3.org/2000/svg',
         };
-        this.icons = iconFile.icons;
-        this.options = (options && options.config) || iconFile.config;
-        this.canObserve = (options && options.observe) || true;
-        this.canObserve && this.setObserver();
     }
 }
