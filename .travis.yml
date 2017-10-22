@@ -3,9 +3,7 @@ node_js:
     - "node"
     - "8"
 script:
-    - npm run optimize
-    - npm run build
-    - npm test
+    - ./build.sh
 cache:
     directories:
         - "node_modules"
