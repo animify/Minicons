@@ -18,8 +18,8 @@ class Parser {
             const content = Parser.getContent(markup);
             const iconObject = {
                 name,
-                content
-            }
+                content,
+            };
 
             this.icons.push(iconObject);
         });
