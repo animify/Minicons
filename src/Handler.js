@@ -1,20 +1,16 @@
 import iconFile from '../dist/Minicons.json';
 
 export default class Handler {
-    constructor(options) {
-        this.icons = iconFile.icons;
-        this.options = (options && options.config) || iconFile.config;
-        this.canObserve = (options && options.observe) || true;
-        this.canObserve && this.setObserver();
-    }
-
     create(name, props) {
-        const iconObject = this.icons.find(ic => ic.name === name);
-        if (iconObject === null || iconObject === undefined) return null;
-
         const propsArray = [];
+        const iconObject = this.icons.find(ic => ic.name === name);
+        const mergedProps = Object.assign(props, this.defaultProps);
 
-        Object.keys(props).forEach(prop => props[prop] && propsArray.push(`${prop}="${props[prop]}"`));
+        if (!iconObject) return undefined;
+
+        Object.keys(mergedProps).forEach(prop => {
+            mergedProps[prop] && propsArray.push(`${prop}="${mergedProps[prop]}"`)
+        });
 
         const svg = `<svg ${propsArray.join(' ')}>${iconObject.content}</svg>`;
         const svgIcon = new DOMParser().parseFromString(svg, 'image/svg+xml');
@@ -22,8 +18,15 @@ export default class Handler {
         return svgIcon.querySelector('svg');
     }
 
-    swap(node) {
+    swap() {
+        const domIcons = document.querySelectorAll('[data-minicon]');
+        domIcons.forEach(icon => this.swapElement(icon));
+    }
+
+    swapElement(node) {
         const svgIcon = this.create(node.dataset.minicon, this.options.attributes);
+        if (!svgIcon) return;
+
         node.parentNode.replaceChild(svgIcon, node);
     }
 
@@ -51,6 +54,16 @@ export default class Handler {
 
         const addedNode = mutation.addedNodes[0];
         const isMinicon = addedNode.dataset && addedNode.dataset.minicon;
-        isMinicon && this.swap(addedNode);
+        isMinicon && this.swapElement(addedNode);
+    }
+
+    constructor(options) {
+        this.defaultProps = {
+            xmlns: 'http://www.w3.org/2000/svg',
+        };
+        this.icons = iconFile.icons;
+        this.options = (options && options.config) || iconFile.config;
+        this.canObserve = (options && options.observe) || true;
+        this.canObserve && this.setObserver();
     }
 }

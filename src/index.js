@@ -1,5 +1,3 @@
-import Handler from './Handler'
+import Handler from './Handler';
 
-const Minicons = new Handler();
-
-module.exports = { Minicons };
+module.exports = new Handler();
