@@ -38,7 +38,11 @@ export default class MiniconsHandler {
      * @param {Element} node The element that is to be switched
      */
     swapElement(element) {
-        const iconSvg = this.create(element.dataset.minicon, this.options.props);
+        const iconProps = Object.assign(this.options.props, {
+            class: `${element.classList.value} minicon minicon-${element.dataset.minicon}`
+        });
+        const iconSvg = this.create(element.dataset.minicon, iconProps);
+
         if (!iconSvg) return;
 
         element.parentNode.replaceChild(iconSvg, element);

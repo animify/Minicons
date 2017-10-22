@@ -32,13 +32,11 @@ function RUN_TESTS {
 
 if [[ $1 == "icons" ]]; then
 BUILD_ICONS
-
 echo -e "\e[37m\e[42m Build completed.\033[0m"
 elif [ $# -eq 0 ]; then
 DELETE_TEMP
 BUILD_ICONS
 BUILD_JS
 RUN_TESTS
-
 echo -e "\e[37m\e[42m Build & test completed.\033[0m"
 fi

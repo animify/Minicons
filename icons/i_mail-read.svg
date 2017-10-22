@@ -136,6 +136,16 @@
 	<g id="mail">
 	</g>
 	<g id="mail-read">
+		<g>
+			
+				<polyline fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				4,9 12,14 20,9 			"/>
+			
+				<polyline fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				3,8.5 12,3.5 21,8.5 			"/>
+			<path fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M21,8.5v10c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2v-10"/>
+		</g>
 	</g>
 	<g id="align-justify">
 	</g>
@@ -144,20 +154,6 @@
 	<g id="align-left">
 	</g>
 	<g id="align-right">
-		<g>
-			
-				<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				19.9,18 11.1,18 11.1,18 19.9,18 			"/>
-			
-				<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				20,14 4,14 4,14 20,14 			"/>
-			
-				<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				19.9,10 11.1,10 11.1,10 19.9,10 			"/>
-			
-				<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				20,6 4,6 4,6 20,6 			"/>
-		</g>
 	</g>
 	<g id="navigation-nw">
 	</g>
