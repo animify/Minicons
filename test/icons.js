@@ -1,6 +1,6 @@
 import path from 'path';
 import { use, expect, assert } from 'chai';
-import Parser from '../bin/parser';
+import Parser from '../bin/Parser';
 import svgConfig from './../configs/svg.json';
 
 use(require('chai-fs'));
@@ -40,8 +40,8 @@ describe('Valid theme config', () => {
     });
 
     it('Attributes property', next => {
-        expect(svgConfig).to.have.property('attributes');
-        expect(svgConfig.attributes).to.not.be.empty;
+        expect(svgConfig).to.have.property('props');
+        expect(svgConfig.props).to.not.be.empty;
         next();
     });
 });

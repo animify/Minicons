@@ -1,6 +1,6 @@
 import iconFile from '../dist/Minicons.json';
 
-export default class Handler {
+export default class MiniconsHandler {
     /**
      * Creates an SVG Minicon element
      * @param  {string} name The defined name of the Minicon
@@ -9,7 +9,7 @@ export default class Handler {
      */
     create(name, props) {
         const propsArray = [];
-        const iconObject = this.icons.find(ic => ic.name === name);
+        const iconObject = this.icons.find(icon => icon.name === name);
         const mergedProps = Object.assign(props, this.defaultProps);
 
         if (!iconObject) return undefined;
@@ -18,10 +18,10 @@ export default class Handler {
             mergedProps[prop] && propsArray.push(`${prop}="${mergedProps[prop]}"`);
         });
 
-        const svg = `<svg ${propsArray.join(' ')}>${iconObject.content}</svg>`;
-        const svgIcon = new DOMParser().parseFromString(svg, 'image/svg+xml');
+        const iconString = `<svg ${propsArray.join(' ')}>${iconObject.content}</svg>`;
+        const iconSvg = new DOMParser().parseFromString(iconString, 'image/svg+xml');
 
-        return svgIcon.querySelector('svg');
+        return iconSvg.querySelector('svg');
     }
 
     /**
@@ -29,19 +29,19 @@ export default class Handler {
      * and swaps them into Minicons
      */
     swap() {
-        const domIcons = document.querySelectorAll('[data-minicon]');
-        domIcons.forEach(icon => this.swapElement(icon));
+        const iconElements = document.querySelectorAll('[data-minicon]');
+        iconElements.forEach(icon => this.swapElement(icon));
     }
 
     /**
      * Swaps the DOM element with a Minicon
      * @param {Element} node The element that is to be switched
      */
-    swapElement(node) {
-        const svgIcon = this.create(node.dataset.minicon, this.options.attributes);
-        if (!svgIcon) return;
+    swapElement(element) {
+        const iconSvg = this.create(element.dataset.minicon, this.options.props);
+        if (!iconSvg) return;
 
-        node.parentNode.replaceChild(svgIcon, node);
+        element.parentNode.replaceChild(iconSvg, element);
     }
 
     /**
@@ -54,10 +54,10 @@ export default class Handler {
     /**
      * Sets up a mutation observer
      * and checks if Minicon is added
-     * @param  {Element} domNode The element that is being watched
-     * @return {Promise} Returns the mutation observer
+     * @param  {Element} parent The parent element that is being watched
+     * @return {Promise} Returns the mutation observer promise
      */
-    watch(domNode) {
+    watch(parent) {
         const observerConfig = {
             attributes: false,
             childList: true,
@@ -66,9 +66,9 @@ export default class Handler {
 
         return new Promise(resolve => {
             new MutationObserver((mutations => {
-                mutations.forEach(mutation => this.isMinicon(mutation));
+                mutations.forEach(mutation => this.handleMutation(mutation));
                 resolve(mutations);
-            })).observe(domNode, observerConfig);
+            })).observe(parent, observerConfig);
         });
     }
 
@@ -77,12 +77,12 @@ export default class Handler {
      * and swaps the affected element
      * @param {Object} mutation The mutation object passed from the observer
      */
-    isMinicon(mutation) {
+    handleMutation(mutation) {
         if (mutation.addedNodes.length === 0) return;
 
         const addedNode = mutation.addedNodes[0];
-        const isMinicon = addedNode.dataset && addedNode.dataset.minicon;
-        isMinicon && this.swapElement(addedNode);
+        const nodeName = addedNode.dataset && addedNode.dataset.minicon;
+        nodeName && this.swapElement(addedNode);
     }
 
     /**

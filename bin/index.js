@@ -1,5 +1,5 @@
-import Parser from './parser';
+import Parser from './Parser';
 
 const parser = new Parser();
-parser.mapIconFiles();
+parser.parseIconFiles();
 parser.outputJSON();

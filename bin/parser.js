@@ -5,14 +5,14 @@ import defaultTheme from '../configs/svg.json';
 
 export default class Parser {
     /**
-     * Map through all icon files and normalize the data
+     * Loop through all icon files and normalize the data
      * and appends to out output object
      */
-    mapIconFiles() {
-        this.iconFiles.forEach(icon => {
-            const name = path.basename(icon, '.svg').substring(2);
-            const markup = fs.readFileSync(path.resolve(this.distIconsFolder, icon), 'utf8');
-            const content = Parser.getContent(markup);
+    parseIconFiles() {
+        this.iconFiles.forEach(iconFile => {
+            const name = path.basename(iconFile, '.svg').substring(2);
+            const svgMarkup = fs.readFileSync(path.resolve(this.distIconsFolder, iconFile), 'utf8');
+            const content = Parser.getContent(svgMarkup);
             const iconObject = {
                 name,
                 content,
@@ -60,6 +60,6 @@ export default class Parser {
             icons: [],
         };
         this.iconFiles = fs.readdirSync(this.distIconsFolder)
-            .filter(file => path.basename(file).substring(0, 2) === 'i_' && path.extname(file) === '.svg');
+            .filter(iconFile => path.basename(iconFile).substring(0, 2) === 'i_' && path.extname(iconFile) === '.svg');
     }
 }

@@ -1,3 +1,3 @@
-import Handler from './Handler';
+import MiniconsHandler from './MiniconsHandler';
 
-module.exports = new Handler();
+module.exports = new MiniconsHandler();

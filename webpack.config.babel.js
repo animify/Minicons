@@ -8,6 +8,7 @@ export default {
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'umd',
         library: 'minicons',
+        filename: 'minicons.js'
     },
     module: {
         rules: [
