@@ -5,3 +5,7 @@ node_js:
 script:
     - npm run optimize
     - npm run build
+    - npm test
+cache:
+    directories:
+        - "node_modules"
