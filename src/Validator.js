@@ -62,7 +62,5 @@ export default class Validator {
                 });
             }
         }
-
-        return next();
     }
 }
