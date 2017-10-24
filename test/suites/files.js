@@ -24,6 +24,21 @@ describe('File checks', () => {
         next();
     });
 
+    it('Default svg options file exists', next => {
+        assert.jsonFile('configs/svg.json');
+        next();
+    });
+
+    it('Options template exists', next => {
+        assert.jsonFile('configs/optionsTemplate.json');
+        next();
+    });
+
+    it('SVGO config file exists', next => {
+        expect('configs/svgo.yml').to.be.a.file().and.not.empty;
+        next();
+    });
+
     it('Icon has SVG tag', next => {
         const hasSvgTag = new RegExp(/svg/, 'i');
         expect('icons/i_add-circle.svg').to.be.a.file().with.contents.that.match(hasSvgTag);

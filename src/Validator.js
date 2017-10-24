@@ -63,4 +63,8 @@ export default class Validator {
             }
         }
     }
+
+    static validateObject() {
+
+    }
 }

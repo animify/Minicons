@@ -21,5 +21,13 @@
     "browser": true,
     "mocha": true,
     "node": true
-  }
+  },
+  "globals": {
+        "path": true,
+        "assert": true,
+        "expect": true,
+        "Parser": true,
+        "svgConfig": true,
+        "MiniconsHandler": true,
+    }
 }
