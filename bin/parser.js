@@ -39,6 +39,21 @@ export default class Parser {
      * Writes the output to a JSON file
      * @return {string | boolean} Returns error or true if successful
      */
+    mergeTags(tags) {
+        this.output.icons = this.output.icons.map(icon => {
+            const tag = tags.find(t => t.name === icon.name);
+            icon.aliases = tag.aliases;
+            if (tag.hasOwnProperty('fillTag'))
+                icon.fillTag = tag.fillTag || null;
+
+            return icon;
+        });
+    }
+
+    /**
+     * Writes the output to a JSON file
+     * @return {string | boolean} Returns error or true if successful
+     */
     outputJSON() {
         const output = JSON.stringify(this.output);
 

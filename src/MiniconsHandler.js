@@ -19,14 +19,27 @@ export default class MiniconsHandler {
     }
 
     /**
+     * Finds an icon by name or alias
+     * @param  {string} name The defined name of the Minicon
+     * @return {object} The object of the icon
+     */
+    find(name) {
+        return this.icons.find(icon => {
+            const directName = icon.name === name;
+            const aliasName = icon.aliases.includes(name);
+            return directName || aliasName;
+        })
+    }
+
+    /**
      * Creates an SVG Minicon element
      * @param  {string} name The defined name of the Minicon
-     * @param  {Object} props The props to be applied to the SVG element
+     * @param  {object} props The props to be applied to the SVG element
      * @return {Element} The SVG element of the Minicon
      */
     create(name, props) {
         const propsArray = [];
-        const iconObject = this.icons.find(icon => icon.name === name);
+        const iconObject = this.find(name);
         const mergedProps = Object.assign(props, this.defaultProps);
 
         if (!iconObject) return undefined;
@@ -37,8 +50,17 @@ export default class MiniconsHandler {
 
         const iconString = `<svg ${propsArray.join(' ')}>${iconObject.content}</svg>`;
         const iconSvg = new DOMParser().parseFromString(iconString, 'image/svg+xml');
+        const svg = iconSvg.querySelector('svg');
 
-        return iconSvg.querySelector('svg');
+        if (iconObject.hasOwnProperty('fillTag')) {
+            const fillables = Array.prototype.slice.call(svg.getElementsByTagName(iconObject.fillTag));
+            fillables.forEach(element => {
+                element.setAttribute('fill', mergedProps.stroke);
+                element.setAttribute('stroke-width', 0);
+            });
+        }
+
+        return svg;
     }
 
     /**
