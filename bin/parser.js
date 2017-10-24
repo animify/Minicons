@@ -43,8 +43,9 @@ export default class Parser {
         this.output.icons = this.output.icons.map(icon => {
             const tag = tags.find(t => t.name === icon.name);
             icon.aliases = tag.aliases;
-            if (tag.hasOwnProperty('fillTag'))
+            if (tag.hasOwnProperty('fillTag')) {
                 icon.fillTag = tag.fillTag || null;
+            }
 
             return icon;
         });

@@ -1,3 +1,5 @@
+/* eslint no-console: "off" */
+
 import iconFile from '../dist/Minicons.json';
 import Validator from './Validator';
 
@@ -7,13 +9,13 @@ export default class MiniconsHandler {
      * @param {Object} options Observe and config options
      */
     setOptions(options) {
-        Validator.validateOptions(options, (error) => {
+        Validator.validateOptions(options, error => {
             if (!error) {
                 options.config.props = Object.assign(this.config.props, options.config.props);
                 this.config = options.config || this.config;
                 this.canObserve = options.observe !== undefined ? options.observe : true;
             } else {
-                console.log(`%cMinicons:`, 'font-weight: bold; text-decoration: underline;', `Oh oh! Something wrong when processing your options. ${error.message} [${error.type}]`, )
+                console.log('%cMinicons:', 'font-weight: bold; text-decoration: underline;', `Oh oh! Something wrong when processing your options. ${error.message} [${error.type}]`);
             }
         });
     }
@@ -28,7 +30,7 @@ export default class MiniconsHandler {
             const directName = icon.name === name;
             const aliasName = icon.aliases.includes(name);
             return directName || aliasName;
-        })
+        });
     }
 
     /**
@@ -53,8 +55,9 @@ export default class MiniconsHandler {
         const svg = iconSvg.querySelector('svg');
 
         if (iconObject.hasOwnProperty('fillTag')) {
-            const fillables = Array.prototype.slice.call(svg.getElementsByTagName(iconObject.fillTag));
-            fillables.forEach(element => {
+            let fillableTags = svg.getElementsByTagName(iconObject.fillTag);
+            fillableTags = Array.prototype.slice.call(fillableTags);
+            fillableTags.forEach(element => {
                 element.setAttribute('fill', mergedProps.stroke);
                 element.setAttribute('stroke-width', 0);
             });
@@ -71,9 +74,9 @@ export default class MiniconsHandler {
         const iconElements = document.querySelectorAll('[data-minicon]');
         iconElements.forEach(icon => this.swapElement(icon));
 
-        if (this._firstRun) {
+        if (this.firstRun) {
             this.canObserve && this.setObserver();
-            this._firstRun = false;
+            this.firstRun = false;
         }
     }
 
@@ -83,7 +86,7 @@ export default class MiniconsHandler {
      */
     swapElement(element) {
         const iconProps = Object.assign(this.config.props, {
-            class: `${element.classList.value} minicon minicon-${element.dataset.minicon}`
+            class: `${element.classList.value} minicon minicon-${element.dataset.minicon}`,
         });
         const iconSvg = this.create(element.dataset.minicon, iconProps);
 
@@ -137,7 +140,7 @@ export default class MiniconsHandler {
      * Sets the default props and the icon JSON file/config
      */
     constructor() {
-        this._firstRun = true;
+        this.firstRun = true;
         this.canObserve = true;
         this.config = iconFile.config;
         this.icons = iconFile.icons;

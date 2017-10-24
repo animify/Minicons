@@ -13,6 +13,8 @@
     "linebreak-style": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-shadow": "off",
+    "no-prototype-builtins": "off",
+    "no-param-reassign": "off",
     "no-unused-expressions": "off"
   },
    "env": {

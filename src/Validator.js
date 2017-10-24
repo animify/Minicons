@@ -1,3 +1,5 @@
+/* eslint consistent-return: "off" */
+
 export default class Validator {
     /**
      * Validate user options when passed
@@ -8,7 +10,7 @@ export default class Validator {
     static validateOptions(options, next) {
         const error = {
             type: '',
-            message: ''
+            message: '',
         };
 
         if (options === null) {
@@ -25,7 +27,7 @@ export default class Validator {
             return next(error);
         }
 
-        if (options.hasOwnProperty('observe') && typeof(options.observe) !== 'boolean') {
+        if (options.hasOwnProperty('observe') && typeof (options.observe) !== 'boolean') {
             error.type = 'options.observe';
             error.message = 'Observe property is not a boolean.';
 
@@ -33,7 +35,7 @@ export default class Validator {
         }
 
         if (options.hasOwnProperty('config')) {
-            if (options.config.hasOwnProperty('name') && typeof(options.config.name) !== 'string') {
+            if (options.config.hasOwnProperty('name') && typeof (options.config.name) !== 'string') {
                 error.type = 'options.config.name';
                 error.message = 'Config name is not a string.';
 
@@ -42,7 +44,7 @@ export default class Validator {
 
             if (options.config.hasOwnProperty('props')) {
                 ['width', 'height', 'stroke-width'].forEach(prop => {
-                    if (options.config.props.hasOwnProperty(prop) && typeof(options.config.props[prop]) !== 'number') {
+                    if (options.config.props.hasOwnProperty(prop) && typeof (options.config.props[prop]) !== 'number') {
                         error.type = `options.config.props.${prop}`;
                         error.message = `Config ${prop} property is not a number.`;
 
@@ -51,7 +53,7 @@ export default class Validator {
                 });
 
                 ['viewBox', 'fill', 'stroke', 'stroke-linecap', 'stroke-linejoin'].forEach(prop => {
-                    if (options.config.props.hasOwnProperty(prop) && typeof(options.config.props[prop]) !== 'string') {
+                    if (options.config.props.hasOwnProperty(prop) && typeof (options.config.props[prop]) !== 'string') {
                         error.type = `options.config.props.${prop}`;
                         error.message = `Config ${prop} property is not a string.`;
 
@@ -61,6 +63,6 @@ export default class Validator {
             }
         }
 
-        next();
+        return next();
     }
 }
