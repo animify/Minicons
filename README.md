@@ -40,7 +40,7 @@ Include the CDN or the path to minicons.js at the end of your closing `<body/>` 
 Now it's time to add an icon. Just create a tag with `data-minicon` and the name:
 
 ```html
-<i data-minicon="chevron-right/>
+<i data-minicon="chevron-right"/>
 ```
 
 #### 4. Do the swap
