@@ -3,10 +3,10 @@
   <g id="Complete">
     <g id="grid">
       <g>
-        <rect x="14" y="2.5" width="7.5" height="7.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <rect x="14" y="14" width="7.5" height="7.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <rect x="2.5" y="2.5" width="7.5" height="7.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <rect x="2.5" y="14" width="7.5" height="7.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect x="14.5" y="2.5" width="7" height="7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect x="14.5" y="14.5" width="7" height="7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect x="2.5" y="2.5" width="7" height="7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect x="2.5" y="14.5" width="7" height="7" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
     </g>
   </g>

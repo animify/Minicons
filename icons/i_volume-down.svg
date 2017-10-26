@@ -4,7 +4,7 @@
     <g id="volume-down">
       <g>
         <polygon points="4.9 9 8.9 9 13.9 3 13.9 21 8.9 16 3.9 16 3.9 9 4.9 9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <path d="M17.6,14.8A2.7,2.7,0,0,0,20.1,12a2.7,2.7,0,0,0-2.5-2.8" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M17.5,15a3,3,0,0,0,0-6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
     </g>
   </g>
