@@ -11,9 +11,22 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 
 ## Table of contents
 
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
+1. [Features](#features)
+2. [Getting Minicons](#getting-minicons)
+   1. [CDN](#cdn)
+   2. [ZIP](#download-the-zip)
+   3. [NPM](#using-npm)
+3. [Quick start](#download-the-zip)
+4. [API](#api)
+   1. [Properties](#properties)
+      - [`minicons.icons`](#miniconsicons)
+      - [`minicons.config`](#miniconsconfig)
+   2. [Methods](#methods)
+      - [`minicons.find()`](#miniconsfindname)
+      - [`minicons.create()`](#miniconscreatename-props)
+      - [`minicons.swap()`](#miniconsswap)
+5. [Contributing guidelines](#building)
+5. [License](#license)
 
 
 ## Features
@@ -27,7 +40,7 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 
 ## Getting Minicons
 
-#### 1. CDN
+### CDN
 
 You can directly import minicons.js from the CDN:
 
@@ -35,11 +48,11 @@ You can directly import minicons.js from the CDN:
 http://cdn.darken.io/minicons/1.0/minicons.js
 ```
 
-#### 2. Download the ZIP
+### Download the ZIP
 
 [Download](https://github.com/animify/Minicons/files/1419498/Minicons-v1.0.zip) the latest release.
 
-#### 3. Using NPM
+### Using NPM
 
 Install Minicons using CDN
 
