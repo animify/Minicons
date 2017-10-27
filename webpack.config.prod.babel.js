@@ -1,4 +1,5 @@
 import path from 'path';
+import MinifyPlugin from 'babel-minify-webpack-plugin';
 
 export default {
     entry: [
@@ -8,7 +9,7 @@ export default {
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'umd',
         library: 'minicons',
-        filename: 'minicons.js',
+        filename: 'minicons.min.js',
     },
     module: {
         rules: [
@@ -18,5 +19,8 @@ export default {
                 exclude: /node_modules/,
             },
         ],
-    }
+    },
+    plugins: [
+        new MinifyPlugin()
+    ]
 };

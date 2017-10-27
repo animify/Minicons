@@ -26,8 +26,7 @@ function BUILD_JS {
     npm run package
     if [ -d '../Minicons-homepage/libs/static/assets/js' ]; then
         cp dist/minicons.js ../Minicons-homepage/libs/static/assets/js
-       echo -e "\e[35m Copied JS to Minicons homepage.\033[0m"
-
+        echo -e "\e[35m Copied JS to Minicons homepage.\033[0m"
     fi
     echo -e "\e[35m Minicons JS files built.\033[0m"
 }
