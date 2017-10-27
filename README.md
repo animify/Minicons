@@ -15,6 +15,16 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 2. [Example2](#example2)
 3. [Third Example](#third-example)
 
+
+## Features
+
+* Dead simple to set up
+* Icon swap when an element is dynamically added
+* Extensive, straight forward icon object API
+* Over 80+ icons
+* Uniform design
+* Easily configurable
+
 ## Getting Minicons
 
 #### 1. CDN
@@ -86,7 +96,7 @@ All icons added dynamically will be swapped _automagically_ for you. 😎
 
 ### `minicons`
 
-The main handler object.
+The `minicons` object is exposed upon including/importing the Minicons package into your ecosystem.
 
 ### Properties
 
@@ -95,7 +105,7 @@ The main handler object.
 Contains an array of data about every single icon.
 
 
-*Returns an array of icon objects*
+*Returns an array of _icon objects_*
 
 | Property      | Type   | Description             |
 | ------------- | ------ | ----------------------- |
@@ -125,14 +135,63 @@ The config object Minicons was produced from.
 | `props.width`           | number | Width of the icon                           |
 | `props.xmlns`           | string | SVG namespace that is used                  |
 
+### Methods
+
+#### `minicons.find(name)`
+
+Finds an icon by name or alias and returns the _icon object_.
+
+| Parameter   | Type   | Description                                   |
+| ----------- | ------ | --------------------------------------------- |
+| `name`      | string | The name or alias of an icon e.g `add-circle` |
+
+##### Usage
+
+```JS
+minicons.find('plus')
+// {name: "add-circle", content: "<circle cx="12" cy="12" r="10" data-name="--Circle…><line x1="12" x2="12" y1="15.5" y2="8.5"></line>", aliases: Array(1)}
+```
+
+#### `minicons.create(name, props)`
+
+Creates and returns an SVG icon by name and props.
+
+Returns an SVG element.
+
+| Parameter   | Type   | Description                                   |
+| ----------- | ------ | --------------------------------------------- |
+| `name`      | string | The name or alias of an icon e.g `add-circle` |
+| `props`      | object | Objects of props that will be translated to attributes on the SVG element. e.g `{ stroke: 'red' }` will be converted to `stroke="red"` |
+
+##### Usage
+
+```JS
+minicons.find('plus')
+// {name: "add-circle", content: "<circle cx="12" cy="12" r="10" data-name="--Circle…><line x1="12" x2="12" y1="15.5" y2="8.5"></line>", aliases: Array(1)}
+```
+
+#### `minicons.swap()`
+
+Swaps elements in the DOM with the `data-minicon` attribute into an SVG minicon. Only works in a browser environment.
+
+##### Usage
+
+```HTML
+<i data-feather="plus"></i>
+
+<script>
+      minicons.swap()
+</script>
+```
+
 ## Building
 
-#### Build and optimize SVG icon files in the icons directory
+#### Clean, optimize and parse SVG icon files in the icons directory
 ```shell
 $ ./build.sh icons
 ```
 
-#### ...or to Build & optimize icons, package Minicons and run tests
+#### ...or to additionally package Minicons and run tests
 ```shell
 $ ./build.sh
 ```
