@@ -58,7 +58,7 @@ export default class Parser {
     outputJSON() {
         const output = JSON.stringify(this.output);
 
-        fs.writeFile(path.resolve(__dirname, '../dist/Minicons.json'), output, 'utf8', err => {
+        fs.writeFile(path.resolve(__dirname, '../dist/minicons.json'), output, 'utf8', err => {
             if (err) return err;
             return true;
         });

@@ -1,6 +1,6 @@
 /* eslint no-console: "off" */
 
-import iconFile from '../dist/Minicons.json';
+import iconFile from '../dist/minicons.json';
 import Validator from './Validator';
 
 export default class MiniconsHandler {

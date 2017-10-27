@@ -15,7 +15,7 @@ describe('File checks', () => {
     });
 
     it('Minicons JSON created', next => {
-        assert.jsonFile('dist/Minicons.json');
+        assert.jsonFile('dist/minicons.json');
         next();
     });
 

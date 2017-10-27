@@ -1,11 +1,10 @@
 {
     "name": "minicons",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Aesthetic open-source svg icons",
     "main": "dist/minicons.js",
     "dependencies": {
         "parse5": "^3.0.2",
-        "run-sequence": "^2.2.0",
         "svgo": "^0.7.2"
     },
     "devDependencies": {
@@ -33,6 +32,9 @@
         "type": "git",
         "url": "git+https://github.com/animify/Minicons.git"
     },
+    "files": [
+        "dist"
+    ],
     "keywords": [
         "svg",
         "icons",
@@ -44,5 +46,5 @@
     "bugs": {
         "url": "https://github.com/animify/Minicons/issues"
     },
-    "homepage": "https://minicons.io"
+    "homepage": "http://minicons.io"
 }

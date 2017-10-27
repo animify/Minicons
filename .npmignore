@@ -1,0 +1,15 @@
+test
+src
+icons
+configs
+bin
+build.sh
+.travis.yml
+.babelrc
+.eslintrc
+.gitattributes
+.gitignore
+package-lock.json
+test.html
+webpack.config.babel.js
+webpack.config.prod.babel.js
