@@ -11,13 +11,13 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 
 ## Table of contents
 
-## Quick start
+1. [Example](#example)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
 
-Get up and running within minutes.
+## Getting Minicons
 
-###### (Minicons npm package coming soon)
-
-#### 1. Download or use the CDN
+#### 1. CDN
 
 You can directly import minicons.js from the CDN:
 
@@ -25,17 +25,47 @@ You can directly import minicons.js from the CDN:
 http://cdn.darken.io/minicons/1.0/minicons.js
 ```
 
-or [download](https://github.com/animify/Minicons/files/1419498/Minicons-v1.0.zip) the latest release.
+#### 2. Download the ZIP
 
-#### 2. Include
+[Download](https://github.com/animify/Minicons/files/1419498/Minicons-v1.0.zip) the latest release.
+
+#### 3. Using NPM
+
+Install Minicons using CDN
+
+```
+npm i minicons -S
+```
+
+This will create all dist files in the Minicons package folder in your roots' node modules.
+
+```
+├── dist/
+
+      ├── icons/
+
+      ├── minicons.js
+      
+      ├── minicons.min.js
+
+      └── minicons.json
+```
+
+## Quick start
+
+Get up and running within minutes inside your browser.
+
+#### 1. Include
 
 Include the CDN or the path to minicons.js at the end of your closing `<body/>` tag in your markup:
 
 ```html
-<script src="http://cdn.darken.io/minicons/1.0/minicons.js"></script>
+<script src="http://cdn.darken.io/minicons/1.0/minicons.min.js"></script>
+<!-- or use a relative path -->
+<script src="path/to/dist/minicons.min.js"></script>
 ```
 
-#### 3. Add an icon
+#### 2. Add an icon
 
 Now it's time to add an icon. Just create a tag with `data-minicon` and the name:
 
@@ -43,7 +73,7 @@ Now it's time to add an icon. Just create a tag with `data-minicon` and the name
 <i data-minicon="chevron-right"/>
 ```
 
-#### 4. Do the swap
+#### 3. Make the swap
 
 To display the Minicon we do to the swap:
 
@@ -52,10 +82,48 @@ minicons.swap();
 ```
 All icons added dynamically will be swapped _automagically_ for you. 😎
 
-
 ## API
 
+### `minicons`
 
+The main handler object.
+
+### Properties
+
+#### `minicons.icons`
+
+Contains an array of data about every single icon.
+
+
+*Returns an array of icon objects*
+
+| Property      | Type   | Description             |
+| ------------- | ------ | ----------------------- |
+| `aliases`     | array  | List of alias names     |
+| `content`     | string | SVG string of the icon  |
+| `name   `     | string | The name of the icon    |
+
+#### `minicons.config`
+
+The config object Minicons was produced from.
+
+
+*Returns a config object*
+
+| Property                | Type   | Description                                 |
+| ----------------------- | ------ | ------------------------------------------- |
+| `name`                  | string | The name of the config                      |
+| `props`                 | object | The properties that will apply to the svg   |
+| `props.class`           | string | Additional class to be added to the icon    |
+| `props.fill`            | string | Fill to be added                            |
+| `props.height`          | number | Height of the icon                          |
+| `props.stroke`          | string | Stroke color of the icon                    |
+| `props.stroke-linecap`  | string | Linecap used to brush over                  |
+| `props.stroke-linejoin` | string | How the lines will be joined together       |
+| `props.stroke-width`    | number | Width of the stroke applied                 |
+| `props.viewBox`         | string | Viewbox of the SVG icon container           |
+| `props.width`           | number | Width of the icon                           |
+| `props.xmlns`           | string | SVG namespace that is used                  |
 
 ## Building
 
