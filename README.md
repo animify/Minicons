@@ -45,7 +45,14 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 You can directly import minicons.js from the CDN:
 
 ```
-http://cdn.darken.io/minicons/1.0/minicons.js
+http://cdn.darken.io/minicons/1.0.3/minicons.js
+http://cdn.darken.io/minicons/1.0.3/minicons.min.js
+```
+
+CDN links are also supported for older specified versions:
+
+```
+http://cdn.darken.io/minicons/_VERSION_/minicons.js
 ```
 
 ### Download the ZIP
