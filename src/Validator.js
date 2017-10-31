@@ -62,6 +62,8 @@ export default class Validator {
                 });
             }
         }
+
+        return next();
     }
 
     static validateObject() {
