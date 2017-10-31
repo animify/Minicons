@@ -1,6 +1,6 @@
 {
     "name": "minicons",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Aesthetic open-source svg icons",
     "main": "dist/minicons.js",
     "dependencies": {
