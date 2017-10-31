@@ -57,7 +57,7 @@ http://cdn.darken.io/minicons/_VERSION_/minicons.js
 
 ### Download the ZIP
 
-[Download](https://github.com/animify/Minicons/files/1419498/Minicons-v1.0.zip) the latest release.
+[Download](https://github.com/animify/Minicons/releases/latest) the latest release.
 
 ### Using NPM
 
