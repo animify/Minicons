@@ -90,7 +90,7 @@ Get up and running within minutes inside your browser.
 Include the CDN or the path to minicons.js at the end of your closing `<body/>` tag in your markup:
 
 ```html
-<script src="http://cdn.darken.io/minicons/1.0/minicons.min.js"></script>
+<script src="http://cdn.darken.io/minicons/1.0.3/minicons.js"></script>
 <!-- or use a relative path -->
 <script src="path/to/dist/minicons.min.js"></script>
 ```
@@ -125,7 +125,7 @@ The `minicons` object is exposed upon including/importing the Minicons package i
 Contains an array of data about every single icon.
 
 
-*Returns an array of _icon objects_*
+*Returns*: An array of icon objects
 
 | Property      | Type   | Description             |
 | ------------- | ------ | ----------------------- |
@@ -137,8 +137,7 @@ Contains an array of data about every single icon.
 
 The config object Minicons was produced from.
 
-
-*Returns a config object*
+*Returns*: Config object
 
 | Property                | Type   | Description                                 |
 | ----------------------- | ------ | ------------------------------------------- |
@@ -174,14 +173,14 @@ minicons.find('plus')
 
 #### `minicons.create(name, props)`
 
-Creates and returns an SVG icon by name and props.
+Creates and returns an SVG icon by passing name and prop parameters.
 
-Returns an SVG element.
+*Returns*: SVG element.
 
 | Parameter   | Type   | Description                                   |
 | ----------- | ------ | --------------------------------------------- |
 | `name`      | string | The name or alias of an icon e.g `add-circle` |
-| `props`      | object | Objects of props that will be translated to attributes on the SVG element. e.g `{ stroke: 'red' }` will be converted to `stroke="red"` |
+| `props`     | object | Objects of props that will be translated to attributes on the SVG element. e.g `{ stroke: 'red' }` will be converted to `stroke="red"` |
 
 ##### Usage
 
@@ -197,10 +196,10 @@ Swaps elements in the DOM with the `data-minicon` attribute into an SVG minicon.
 ##### Usage
 
 ```HTML
-<i data-feather="plus"></i>
+<i data-minicon="plus"></i>
 
 <script>
-      minicons.swap()
+      minicons.swap();
 </script>
 ```
 
