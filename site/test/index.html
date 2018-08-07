@@ -2,25 +2,35 @@
 
 <head>
     <title>Minicons Test</title>
+    <link href="./app.scss" rel="stylesheet" />
 </head>
 
 <body>
-    <p> Minicons Icon Resolver </p>
-    <div id="test-icons"></div>
+    <div class="container">
+        <h4>Minicons Icon Resolver</h4>
+        <div class="icons"></div>
+    </div>
+
     <script src="../../dist/minicons.min.js"></script>
     <script>
         minicons.icons.forEach(icon => {
+            const iconElementWrapper = document.createElement('span');
+            const iconElementTitle = document.createElement('p');
+            iconElementWrapper.classList.add('icon');
             const iconElement = document.createElement('i');
-            const testIcons = document.getElementById('test-icons');
+            const testIcons = document.getElementsByClassName('icons')[0];
             iconElement.setAttribute('data-minicon', icon.name);
-            testIcons.appendChild(iconElement);
+            iconElementTitle.textContent = icon.name;
+            iconElementWrapper.appendChild(iconElementTitle);
+            iconElementWrapper.appendChild(iconElement);
+            testIcons.appendChild(iconElementWrapper);
         });
         minicons.setOptions({
             "observe": true,
             "config": {
                 "name": "theme_config",
                 "props": {
-                    "stroke": "#ff0060"
+                    "stroke": "#004bff"
                 }
             }
         });

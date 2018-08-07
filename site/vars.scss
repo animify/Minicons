@@ -1,0 +1,18 @@
+@import '../../node_modules/normalize-scss/sass/normalize';
+@include normalize();
+
+$fontFamily: 'Inter UI', sans-serif;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+}
+
+.container {
+    max-width: 980px;
+    padding: 32px;
+    display: block;
+    margin: 0 auto;
+}

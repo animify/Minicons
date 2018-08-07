@@ -21,6 +21,8 @@
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.8.0",
         "mocha": "^4.1.0",
+        "node-sass": "^4.9.2",
+        "normalize-scss": "^7.0.1",
         "parcel": "^1.9.7",
         "svgo": "^0.7.2",
         "webpack": "^3.8.1"

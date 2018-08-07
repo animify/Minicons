@@ -1,0 +1,24 @@
+@import '../vars';
+
+h4 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    
+    .icon {
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        font-size: 11px;
+        text-align: center;
+        font-weight: 500;
+    }
+}
