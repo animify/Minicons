@@ -4,28 +4,34 @@
     "description": "Aesthetic open-source svg icons",
     "main": "dist/minicons.js",
     "dependencies": {
-        "parse5": "^3.0.2",
-        "svgo": "^0.7.2"
+        "parse5": "^3.0.2"
     },
     "devDependencies": {
+        "babel": "^6.23.0",
         "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-loader": "^7.1.2",
         "babel-minify-webpack-plugin": "^0.2.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
         "babel-preset-es2015": "^6.24.1",
+        "babel-runtime": "^6.26.0",
         "chai": "^4.1.2",
         "chai-fs": "^1.0.0",
         "eslint": "^4.9.0",
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.8.0",
-        "mocha": "^4.0.1",
+        "mocha": "^4.1.0",
+        "parcel": "^1.9.7",
+        "svgo": "^0.7.2",
         "webpack": "^3.8.1"
     },
     "scripts": {
+        "build": "./build.sh",
         "parse": "./node_modules/.bin/babel-node bin/index",
         "package": "npm run package:js && npm run package:prod",
         "package:js": "webpack --config ./webpack.config.babel.js",
         "package:prod": "webpack --config ./webpack.config.prod.babel.js",
+        "site:test": "parcel -d site/test/output --port 1111 site/test/index.html --open --global minicons",
         "test": "mocha --compilers js:babel-core/register"
     },
     "repository": {

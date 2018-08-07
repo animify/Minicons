@@ -1,3 +1,6 @@
+.cache
+site/**/output
+
 # Logs
 logs
 *.log
