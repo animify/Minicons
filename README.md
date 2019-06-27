@@ -45,14 +45,13 @@ Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at 
 You can directly import minicons.js from the CDN:
 
 ```
-http://cdn.darken.io/minicons/1.0.3/minicons.js
-http://cdn.darken.io/minicons/1.0.3/minicons.min.js
+https://unpkg.com/minicons@latest/dist/minicons.js
 ```
 
 CDN links are also supported for older specified versions:
 
 ```
-http://cdn.darken.io/minicons/_VERSION_/minicons.js
+https://unpkg.com/minicons@_VERSION_/dist/minicons.js
 ```
 
 ### Download the ZIP
@@ -90,7 +89,7 @@ Get up and running within minutes inside your browser.
 Include the CDN or the path to minicons.js at the end of your closing `<body/>` tag in your markup:
 
 ```html
-<script src="http://cdn.darken.io/minicons/1.0.3/minicons.js"></script>
+<script src=https://unpkg.com/minicons@latest/dist/minicons.js"></script>
 <!-- or use a relative path -->
 <script src="path/to/dist/minicons.min.js"></script>
 ```
@@ -217,8 +216,8 @@ $ ./build.sh
 
 ## Contributing guidelines
 
-If you wish to contribute to the Minicons project please check out the ![contributing guidelines](CODE_OF_CONDUCT.md).
+If you wish to contribute to the Minicons project please check out the [contributing guidelines](CODE_OF_CONDUCT.md).
 
 ## License
 
-Minicons is licensed under the ![MIT License](LICENSE)
+Minicons is licensed under the [MIT License](LICENSE)
