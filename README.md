@@ -7,7 +7,7 @@
 
 Minicons is an open-source SVG icon set drafted on an 24x24 sized grid aimed at unifying icon design across a website. Currently the first release is covering several categories of icons (86 total).
 
-[View available icons](http://minicons.io)
+[View available icons](https://minicons.netlify.app)
 
 ## Table of contents
 
